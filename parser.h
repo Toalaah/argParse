@@ -1,3 +1,6 @@
+#ifdef __cplusplus
+extern "C" {
+#endif
 #ifndef PARSER_H
 #define PARSER_H
 
@@ -49,4 +52,6 @@ void argInfo(arg *arg);
 void printArgs(argParser *parser);
 
 #endif
-
+#ifdef __cplusplus
+}
+#endif

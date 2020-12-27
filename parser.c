@@ -7,7 +7,7 @@ argParser *createParser(char *description)
 {
   // allocates necessary memory and returns pointer to a parser
 
-  argParser *tmp = malloc(sizeof(argParser));
+  argParser *tmp = (argParser*)malloc(sizeof(argParser));
   tmp->desc = description;
   tmp->argCount = 0;
 

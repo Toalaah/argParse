@@ -29,7 +29,18 @@ and copy **parser.h** as well as **parser.c** into your desired project. All tha
   parseArguments(parser, argv, argc);
 ```
 
-The example above illustrates how the variables **foo** and **bar** become tethered to the command-line arguments `-f` and `-b` respectively. The full example file (with additional comments) can be found in `examples/main.c` and can be compiled and run with `make example`.
+The example above illustrates how the variables **foo** and **bar** become tethered to the command-line arguments `-f` and `-b` respectively. The full example file (with additional comments) can be found in `examples/main.c` and can be compiled with `make example`.    
+
+Note: when using the library with C++ files you may need to cast the strings in `addArgument` as `(char *)`, other than that everything else should work fine.
+
+### Compiling
+
+These are the ways I recommend compiling the object files for C++ and C projects respectively:
+
+```bash
+ g++ -std=c++17 -w -c parser.c -o parser.o     // C++
+ gcc -std=c99 -c parser.c -o parser.o          // C
+```
 
 ### Still in Progress
 
